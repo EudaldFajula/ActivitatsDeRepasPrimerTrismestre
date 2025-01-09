@@ -3,15 +3,19 @@ using System;
 
 namespace ActRepas
 {
-    public class Activitats
+    public static class Activitats
     {
         public static void Main()
         {
-            const string Msg = "Enter how many seconds";
-            int sec;
-            Console.WriteLine(Msg);
-            sec = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"{Act1.ChangeSecToHour(sec)} hour {Act1.ChangeHourToMin(sec, Act1.ChangeSecToHour(sec))} minute {Act1.ChangeToSec(sec, Act1.ChangeSecToHour(sec), Act1.ChangeHourToMin(sec, Act1.ChangeSecToHour(sec)))} seconds");
+            const string BaseMsg = "Introduce the base of the triangle";
+            const string HeightMsg = "Introcude the height of the triangle";
+            const string ResultMsg = "This is the area of the triangle: {0}";
+            int baseNum, heightNum;
+            Console.WriteLine(BaseMsg);
+            baseNum = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(HeightMsg);
+            heightNum = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(ResultMsg, Act2.CalculateAreaTriangle(baseNum, heightNum));
         }
     }
 }

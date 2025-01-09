@@ -1,6 +1,6 @@
 ﻿namespace BibliotecaActRepas
 {
-    public class Act1
+    public static class Act1
     {
         public static int ChangeSecToHour(int sec)
         {
@@ -13,6 +13,13 @@
         public static int ChangeToSec(int sec, int hour, int min)
         {
             return sec - (hour * 3600 + min * 60);
+        }
+    }
+    public static class Act2
+    {
+        public static int CalculateAreaTriangle(int baseNum, int heightNum)
+        {
+            return (baseNum * heightNum) / 2;
         }
     }
 }
