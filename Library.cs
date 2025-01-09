@@ -22,4 +22,11 @@
             return (baseNum * heightNum) / 2;
         }
     }
+    public static class Act3
+    {
+        public static double CalculateDegrees(double celsius)
+        {
+            return (1.8 * celsius) + 32; 
+        }
+    }
 }

@@ -7,15 +7,12 @@ namespace ActRepas
     {
         public static void Main()
         {
-            const string BaseMsg = "Introduce the base of the triangle";
-            const string HeightMsg = "Introcude the height of the triangle";
-            const string ResultMsg = "This is the area of the triangle: {0}";
-            int baseNum, heightNum;
-            Console.WriteLine(BaseMsg);
-            baseNum = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(HeightMsg);
-            heightNum = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(ResultMsg, Act2.CalculateAreaTriangle(baseNum, heightNum));
+            const string MsgCelsius = "Write the degrees in Celsius";
+            const string FinalMsg = "The Celsius degrees in Fahrenheit are: {0}";
+            double celsius;
+            Console.WriteLine(MsgCelsius);
+            celsius = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine(FinalMsg, Act3.CalculateDegrees(celsius));
         }
     }
 }
