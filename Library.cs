@@ -131,4 +131,11 @@ namespace BibliotecaActRepas
             }
         }
     }
+    public static class Act9
+    {
+        public static double CalculateTip(double importNum)
+        {
+            return importNum * 0.20;
+        }
+    }
 }

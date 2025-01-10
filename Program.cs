@@ -7,21 +7,14 @@ namespace ActRepas
     {
         public static void Main()
         {
-            const string MsgPostalCode = "Enter your postal code: ";
-            const string MsgRight = "Your postal code is correct";
-            const string MsgWrong = "Your postal code is incorrect";
-            Console.WriteLine(MsgPostalCode);
+            const string Msg = "Enter an import";
+            const string FinalMsg = "The tip is: {0}";
+            double importNum;
             try
             {
-                string postalCode = Console.ReadLine();
-                if (Act8.AnalizeGeneralPostalCode(postalCode))
-                {
-                    Console.WriteLine(MsgRight);
-                }
-                else
-                {
-                    Console.WriteLine(MsgWrong);
-                }
+                Console.WriteLine(Msg);
+                importNum = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine(FinalMsg, Act9.CalculateTip(importNum));
             }
             catch (FormatException)
             {
