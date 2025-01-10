@@ -24,16 +24,23 @@
     }
     public static class Act3
     {
-        public static double CalculateDegreesFare(double celsius)
+        public static double CalculateDegreesCelsiusToFare(double celsius)
         {
             return (1.8 * celsius) + 32; 
         }
     }
     public static class Act4
     {
-        public static double CalculateDegreesKevin(double celsius)
+        public static double CalculateDegreesCelsiusToKelvin(double celsius)
         {
             return celsius + 273.15;
+        }
+    }
+    public static class Act5
+    {
+        public static double CalculateDegreesKelvinToCelsius(double kelvin)
+        {
+            return ((kelvin - 273.15) * 1.8) + 32;
         }
     }
 }
