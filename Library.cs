@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
 namespace BibliotecaActRepas
 {
@@ -143,6 +144,15 @@ namespace BibliotecaActRepas
         public static double CalculateTipPerPerson(double importNum, int peopleNum)
         {
             return (importNum * 0.20) / peopleNum;
+        }
+    }
+    public static class Act11
+    {
+        public static int CountLengthNum(int number, int counter)
+        {
+            if (number == 0) return counter;
+            counter++;
+            return CountLengthNum(number / 10, counter);
         }
     }
 }

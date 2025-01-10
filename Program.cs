@@ -1,5 +1,6 @@
 ﻿using BibliotecaActRepas;
-using System; 
+using System;
+using System.Data;
 
 namespace ActRepas
 {
@@ -7,18 +8,15 @@ namespace ActRepas
     {
         public static void Main()
         {
-            const string Msg = "Enter an import";
-            const string MsgPersons = "How many people?";
-            const string FinalMsg = "Each person tip is: {0}";
-            double importNum;
-            int peopleNum;
+            const string Msg = "Enter a number: ";
+            const string FinalMsg = "Your number is {0} long";
+            int number;
+            int counter = 0;
+            Console.WriteLine(Msg);
             try
             {
-                Console.WriteLine(Msg);
-                importNum = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine(MsgPersons);
-                peopleNum = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine(FinalMsg, Act10.CalculateTipPerPerson(importNum, peopleNum));
+                number = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine(FinalMsg, Act11.CountLengthNum(number, counter));
             }
             catch (FormatException)
             {
