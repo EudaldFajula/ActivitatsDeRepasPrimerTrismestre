@@ -98,4 +98,37 @@ namespace BibliotecaActRepas
             return hexadecimalNum;
         }
     }
+    public static class Act8
+    {
+        public static bool AnalizeLettersPostalCode(string postalCode)
+        {
+            char[] alpahabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+            for (int i = 0; i < alpahabet.Length; i++)
+            {
+                if (postalCode.ToLower().Contains(alpahabet[i]))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public static bool AnalizeGeneralPostalCode(string postalCode)
+        {
+            if(postalCode.Length == 5)
+            {
+                if (AnalizeLettersPostalCode(postalCode))
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
 }

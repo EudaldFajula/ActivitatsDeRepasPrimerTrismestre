@@ -7,20 +7,20 @@ namespace ActRepas
     {
         public static void Main()
         {
-            const string MsgDecimal = "Enter a decimal number: ";
-            const string MsgHexadecimal = "This is the number in hexadecimal:";
-            int decimalNum;
-            Console.WriteLine(MsgDecimal);
+            const string MsgPostalCode = "Enter your postal code: ";
+            const string MsgRight = "Your postal code is correct";
+            const string MsgWrong = "Your postal code is incorrect";
+            Console.WriteLine(MsgPostalCode);
             try
             {
-                decimalNum = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine(MsgHexadecimal);
-                //Create list with the hexadecimal characters
-                string[] hexadecimalNum = Act7.ChangeDecimalToHexa(decimalNum);
-                //Print the list 
-                for (int i = 0; i < decimalNum.ToString().Length; i++)
+                string postalCode = Console.ReadLine();
+                if (Act8.AnalizeGeneralPostalCode(postalCode))
                 {
-                    Console.Write(hexadecimalNum[i]);
+                    Console.WriteLine(MsgRight);
+                }
+                else
+                {
+                    Console.WriteLine(MsgWrong);
                 }
             }
             catch (FormatException)
