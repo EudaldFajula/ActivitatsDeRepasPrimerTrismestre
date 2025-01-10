@@ -138,4 +138,11 @@ namespace BibliotecaActRepas
             return importNum * 0.20;
         }
     }
+    public static class Act10
+    {
+        public static double CalculateTipPerPerson(double importNum, int peopleNum)
+        {
+            return (importNum * 0.20) / peopleNum;
+        }
+    }
 }
