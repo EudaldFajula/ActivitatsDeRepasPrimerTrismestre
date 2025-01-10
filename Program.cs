@@ -7,12 +7,15 @@ namespace ActRepas
     {
         public static void Main()
         {
-            const string MsgKelvin = "Write the degrees in Kelvin";
-            const string FinalMsg = "The Kelvin degrees in Fahrenheit are: {0}";
-            double kelvin;
-            Console.WriteLine(MsgKelvin);
-            kelvin = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine(FinalMsg, Act5.CalculateDegreesKelvinToCelsius(kelvin));
+            const string MsgOriginalPrice = "The original price is: ";
+            const string MsgDiscountPrice = "The discount price is: ";
+            const string FinalMsg = "The discount is: {0}%";
+            double originalPrice, discountPrice;
+            Console.WriteLine(MsgOriginalPrice);
+            originalPrice = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine(MsgDiscountPrice);
+            discountPrice = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine(FinalMsg, Act6.Discount(originalPrice, discountPrice));
         }
     }
 }

@@ -43,4 +43,11 @@
             return ((kelvin - 273.15) * 1.8) + 32;
         }
     }
+    public static class Act6
+    {
+        public static double Discount(double originalPrice, double discountPrice)
+        {
+            return ((originalPrice - discountPrice) / originalPrice) * 100;
+        }
+    }
 }
