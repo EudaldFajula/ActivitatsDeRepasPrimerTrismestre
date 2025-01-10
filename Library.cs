@@ -1,4 +1,6 @@
-﻿namespace BibliotecaActRepas
+﻿using System;
+
+namespace BibliotecaActRepas
 {
     public static class Act1
     {
@@ -48,6 +50,52 @@
         public static double Discount(double originalPrice, double discountPrice)
         {
             return ((originalPrice - discountPrice) / originalPrice) * 100;
+        }
+    }
+    public static class Act7
+    {
+        public static string ChangeNumHexaToLetter(int num)
+        {
+            //Change the num to the defined char if needed to
+            if (num == 10)
+            {
+                return "A";
+            } else if (num == 11)
+            {
+                return "B";
+            } else if (num == 12)
+            {
+                return "C";
+            } else if (num == 13)
+            {
+                return "D";
+            } else if (num == 14)
+            {
+                return "E";
+            } else if (num == 15)
+            {
+                return "F";
+            }
+            else
+            {
+                return num.ToString();
+            }
+        }
+        public static string[] ChangeDecimalToHexa(int decimalNum)
+        {
+            //Create a variable with the lenght of the number
+            int lenghtNum = decimalNum.ToString().Length;
+            //Create a list where the hexadecimal number will go
+            string[] hexadecimalNum = new string[lenghtNum];
+            //Create variable that we will use it for save the remainer of the division
+            int remainer;
+            for (int i = decimalNum; i > 0; i = i / 16)
+            {
+                lenghtNum = lenghtNum - 1;
+                remainer = i % 16;
+                hexadecimalNum[lenghtNum] = ChangeNumHexaToLetter(remainer);
+            }
+            return hexadecimalNum;
         }
     }
 }

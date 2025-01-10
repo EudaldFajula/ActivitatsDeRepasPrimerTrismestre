@@ -7,15 +7,26 @@ namespace ActRepas
     {
         public static void Main()
         {
-            const string MsgOriginalPrice = "The original price is: ";
-            const string MsgDiscountPrice = "The discount price is: ";
-            const string FinalMsg = "The discount is: {0}%";
-            double originalPrice, discountPrice;
-            Console.WriteLine(MsgOriginalPrice);
-            originalPrice = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine(MsgDiscountPrice);
-            discountPrice = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine(FinalMsg, Act6.Discount(originalPrice, discountPrice));
+            const string MsgDecimal = "Enter a decimal number: ";
+            const string MsgHexadecimal = "This is the number in hexadecimal:";
+            int decimalNum;
+            Console.WriteLine(MsgDecimal);
+            try
+            {
+                decimalNum = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine(MsgHexadecimal);
+                //Create list with the hexadecimal characters
+                string[] hexadecimalNum = Act7.ChangeDecimalToHexa(decimalNum);
+                //Print the list 
+                for (int i = 0; i < decimalNum.ToString().Length; i++)
+                {
+                    Console.Write(hexadecimalNum[i]);
+                }
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Error");
+            }
         }
     }
 }
