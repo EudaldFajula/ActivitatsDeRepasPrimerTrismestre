@@ -8,15 +8,19 @@ namespace ActRepas
     {
         public static void Main()
         {
-            const string MsgCorrect = "The array is ordered";
+            const string MsgAscendentment = "The array is ordered ascendentment";
+            const string MsgDescentment = "The array is ordered descentment";
             const string MsgIncorrect = "The array is not ordered";
             //Create array
-            int[] array = {1,2,3,1,5,6};
+            int[] array = {4,6,2,1};
             try
             {
-                if (Act12.AvaluateArray(array))
+                if (Act13.AnalyzeArrayIfGood(array) == 1)
                 {
-                    Console.WriteLine(MsgCorrect);
+                    Console.WriteLine(MsgAscendentment);
+                }else if (Act13.AnalyzeArrayIfGood(array) == -1)
+                {
+                    Console.WriteLine(MsgDescentment);
                 }
                 else
                 {

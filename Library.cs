@@ -176,4 +176,32 @@ namespace BibliotecaActRepas
             return arrayOrdered;
         }
     }
+    public static class Act13
+    {
+        public static int AnalyzeArrayIfGood(int[] array)
+        {
+            bool ascending = true;
+            bool descending = true;
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (array[i] < array[i - 1])
+                {
+                    ascending = false;
+                }else if (array[i] > array[i - 1])
+                {
+                    descending = false;
+                }
+            }
+            if (ascending)
+            {
+                return 1;
+            }else if (descending)
+            {
+                return -1;
+            }else
+            {
+                return 0;
+            }
+        }
+    }
 }
