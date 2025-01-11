@@ -8,15 +8,20 @@ namespace ActRepas
     {
         public static void Main()
         {
-            const string Msg = "Enter a number: ";
-            const string FinalMsg = "Your number is {0} long";
-            int number;
-            int counter = 0;
-            Console.WriteLine(Msg);
+            const string MsgCorrect = "The array is ordered";
+            const string MsgIncorrect = "The array is not ordered";
+            //Create array
+            int[] array = {1,2,3,1,5,6};
             try
             {
-                number = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine(FinalMsg, Act11.CountLengthNum(number, counter));
+                if (Act12.AvaluateArray(array))
+                {
+                    Console.WriteLine(MsgCorrect);
+                }
+                else
+                {
+                    Console.WriteLine(MsgIncorrect);
+                }
             }
             catch (FormatException)
             {

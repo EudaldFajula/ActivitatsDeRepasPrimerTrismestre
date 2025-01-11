@@ -155,4 +155,25 @@ namespace BibliotecaActRepas
             return CountLengthNum(number / 10, counter);
         }
     }
+    public static class Act12
+    {
+        public static bool AvaluateArray(int[] array)
+        {
+            //Create variable 
+            bool arrayOrdered = false;
+            //Analize one number of the array with the next one
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (array[i - 1] < array[i])
+                {
+                    arrayOrdered = true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return arrayOrdered;
+        }
+    }
 }
