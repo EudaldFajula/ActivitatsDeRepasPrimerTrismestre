@@ -8,23 +8,25 @@ namespace ActRepas
     {
         public static void Main()
         {
-            const string MsgAscendentment = "The array is ordered ascendentment";
-            const string MsgDescentment = "The array is ordered descentment";
-            const string MsgIncorrect = "The array is not ordered";
-            //Create array
-            int[] array = {4,6,2,1};
+            const string MsgMaxNum = "Enter the maximum";
+            const string MsgMinNum = "Enter the minimum";
+            const string MsgNumDiv = "Enter the divisible number";
+            int numMax, numMin, numDiv;
+            Console.WriteLine(MsgMaxNum);
             try
             {
-                if (Act13.AnalyzeArrayIfGood(array) == 1)
+                numMax = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine(MsgMinNum);
+                numMin = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine(MsgNumDiv);
+                numDiv = Convert.ToInt32(Console.ReadLine());
+                int[] arrayNum = Act14.CalcuateDivisibleNumber(numDiv, numMax, numMin);
+                for(int i = 0; i < arrayNum.Length; i++)
                 {
-                    Console.WriteLine(MsgAscendentment);
-                }else if (Act13.AnalyzeArrayIfGood(array) == -1)
-                {
-                    Console.WriteLine(MsgDescentment);
-                }
-                else
-                {
-                    Console.WriteLine(MsgIncorrect);
+                    if (arrayNum[i] != 0)
+                    {
+                        Console.WriteLine($"{arrayNum[i]} ");
+                    }
                 }
             }
             catch (FormatException)

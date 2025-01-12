@@ -204,4 +204,28 @@ namespace BibliotecaActRepas
             }
         }
     }
+    public static class Act14
+    {
+        public static int[] CalcuateDivisibleNumber(int numDiv, int numMax, int numMin)
+        {
+            int[] arrayNumbersDiv = new int[numMax];
+            for (int i = 0; i < numMax; i++)
+            {
+                if (numMin % numDiv == 0)
+                {
+                    arrayNumbersDiv[i] = numMin;
+                }
+                else
+                {
+                    i--;
+                }
+                if (numMin == numMax)
+                {
+                    return arrayNumbersDiv;
+                }
+                numMin++;
+            }
+            return arrayNumbersDiv;
+        }
+    }
 }
