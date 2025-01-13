@@ -8,11 +8,10 @@ namespace ActRepas
     {
         public static void Main()
         {
-            const string MsgTotalWords = "Your string has {0} words";
-            string msg = "Hola que tal como estas?";
+            string Msg = "hola que tal";
             try
-            { 
-                Console.WriteLine(MsgTotalWords, Act18.CountWordsString(msg));
+            {
+                Console.WriteLine(Act19.ChangeMayusString(Msg));
             }
             catch (FormatException)
             {

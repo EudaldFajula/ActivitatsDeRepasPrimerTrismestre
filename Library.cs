@@ -307,4 +307,19 @@ namespace BibliotecaActRepas
             return countWords;
         }
     }
+    public static class Act19
+    {
+        public static string ChangeMayusString(string text)
+        {
+            char[] textArray = text.ToCharArray();
+            for (int i = 0; i < textArray.Length; i++)
+            {
+                if (textArray[i] >= 'a' && textArray[i] <= 'z')
+                {
+                    textArray[i] = (char)(textArray[i] - 32);
+                }
+            }
+            return new string(textArray);
+        }
+    }
 }
