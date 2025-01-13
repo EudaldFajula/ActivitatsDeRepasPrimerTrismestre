@@ -234,7 +234,7 @@ namespace BibliotecaActRepas
         {
             for (int i = 0; i <  array.Length - 1; i++)
             {
-                for (int j = 0; i < array.Length; j++)
+                for (int j = 0; j < array.Length; j++)
                 {
                     if (array[i] > array[j])
                     {
@@ -257,6 +257,23 @@ namespace BibliotecaActRepas
             {
                 return ordenatedArray[0];
             }
+        }
+    }
+    public static class Act16
+    {
+        public static bool ValidatePalindromic(int[] array)
+        {
+            for (int i = 0; i < array.Length - 1;)
+            {
+                for (int j = array.Length - 1; j > 0; j--, i++)
+                {
+                    if (array[i] != array[j])
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
         }
     }
 }

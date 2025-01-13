@@ -8,11 +8,12 @@ namespace ActRepas
     {
         public static void Main()
         {
-            int[] arrayNumbers = { 1, 2, 3, 4, 5, 6 };
-            bool variableForArray = false;
+            const string MsgCorrect = "The array is palindromic";
+            const string MsgIncorrect = "The array is not palindromic";
+            int[] arrayPalindromic = { 9,0,0,9};
             try
             {
-                Console.WriteLine(Act15.ArrayMaxOrMin(arrayNumbers, variableForArray));
+                Console.WriteLine(Act16.ValidatePalindromic(arrayPalindromic) ? MsgCorrect : MsgIncorrect);
             }
             catch (FormatException)
             {
