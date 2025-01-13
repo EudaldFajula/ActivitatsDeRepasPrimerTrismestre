@@ -228,4 +228,35 @@ namespace BibliotecaActRepas
             return arrayNumbersDiv;
         }
     }
+    public static class Act15
+    {
+        public static int[] OrdenateArray(int[] array)
+        {
+            for (int i = 0; i <  array.Length - 1; i++)
+            {
+                for (int j = 0; i < array.Length; j++)
+                {
+                    if (array[i] > array[j])
+                    {
+                        int aux = array[i];
+                        array[i] = array[j];
+                        array[j] = aux;
+                    }
+                }
+            }
+            return array;
+        }
+        public static int ArrayMaxOrMin(int[] array, bool variableForArray)
+        {
+            int[] ordenatedArray = array;
+            if (variableForArray)
+            {
+                return ordenatedArray[ordenatedArray.Length - 1];
+            }
+            else
+            {
+                return ordenatedArray[0];
+            }
+        }
+    }
 }
