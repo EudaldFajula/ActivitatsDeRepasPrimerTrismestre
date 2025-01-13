@@ -8,14 +8,11 @@ namespace ActRepas
     {
         public static void Main()
         {
-            const string normalString = "Hola que tal";
+            const string MsgTotalWords = "Your string has {0} words";
+            string msg = "Hola que tal como estas?";
             try
-            {
-                char[] finalString = Act17.ReverseString(normalString);
-                for(int i = 0; i < finalString.Length; i++)
-                {
-                    Console.Write(finalString[i]);
-                }
+            { 
+                Console.WriteLine(MsgTotalWords, Act18.CountWordsString(msg));
             }
             catch (FormatException)
             {

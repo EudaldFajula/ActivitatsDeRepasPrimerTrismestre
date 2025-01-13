@@ -292,4 +292,19 @@ namespace BibliotecaActRepas
             return finalString;
         }
     }
+    public static class Act18
+    {
+        public static int CountWordsString(string text)
+        {
+            int countWords = 1;
+            for (int i = 0; i < text.Length;i++)
+            {
+                if (text[i] == ' ')
+                {
+                    countWords++;
+                }
+            }
+            return countWords;
+        }
+    }
 }
