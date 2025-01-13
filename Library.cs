@@ -276,4 +276,20 @@ namespace BibliotecaActRepas
             return true;
         }
     }
+    public static class Act17
+    {
+        public static char[] ReverseString(string normalString)
+        {
+            char[] finalString = new char[normalString.Length];
+            for (int i = 0; i < finalString.Length - 1;)
+            {
+                for (int j = finalString.Length - 1; j > 0; j--, i++)
+                {
+                    finalString[i] = normalString[j];
+                    finalString[j] = normalString[i];
+                }
+            }
+            return finalString;
+        }
+    }
 }
