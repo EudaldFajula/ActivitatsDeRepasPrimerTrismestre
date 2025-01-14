@@ -1,0 +1,192 @@
+﻿using BibliotecaActRepas;
+using System.ComponentModel;
+
+namespace TestActRepasPrimerTrimestre
+{
+    [TestClass]
+    public class Act2Test
+    {
+        /* Act 2
+         * Classes d'equivalència:
+         * Num 1: {1...(Infinit)}
+         * Num 2: {1...1000(Infinit)}
+         * Valors limits:
+         * Num 1: {0...1001(Infinit)}
+         * Num 2: {0...1001(Infnit)}
+         */
+        [TestMethod]
+        public void TestNum1With1AndNum2With1()
+        {
+            //Arrange
+            int num1 = 1;
+            int num2 = 1;
+            //Act
+            int result = Act2.CalculateAreaTriangle(num1, num2);
+            //Assert
+            Assert.AreEqual((num1 * num2) / 2, result);
+        }
+        [TestMethod]
+        public void TestNum1With1000AndNum2With1000()
+        {
+            //Arrange
+            int num1 = 1000;
+            int num2 = 1000;
+            //Act
+            int result = Act2.CalculateAreaTriangle(num1,num2);
+            //Assert
+            Assert.AreEqual((num1 * num2) / 2, result);
+        }
+        [TestMethod]
+        public void TestNum1With0AndNum2With0()
+        {
+            //Arrange
+            int num1 = 0;
+            int num2 = 0;
+            //Act
+            int result = Act2.CalculateAreaTriangle(num1, num2);
+            //Assert
+            Assert.AreEqual((num1 * num2) / 2, result);
+        }
+        [TestMethod]
+        public void TestNum1With1001AndNum2With1001()
+        {
+            //Arrange
+            int num1 = 1001;
+            int num2 = 1001;
+            //Act
+            int result = Act2.CalculateAreaTriangle(num1, num2);
+            //Assert
+            Assert.AreEqual((num1 * num2) / 2, result);
+        }
+    }
+    [TestClass]
+    public class Act8Test
+    {
+        /* Act 8
+         * Classes d'equivalència:
+         * Codi postal: Longitud(5), 5 xifres numeriques, 0 Text
+         * Valors limits:
+         * Codi postal: Longitud(4-6), 4-6 xifres numeriques, 1 Text
+         */
+        [TestMethod]
+        public void TestCodeLong5Nums5Text0()
+        {
+            //Arrange
+            string code = "86451";
+            //Act
+            bool result = Act8.AnalizeGeneralPostalCode(code);
+            //Assert
+            Assert.IsTrue(result);
+        }
+        [TestMethod]
+        public void TestCodeLong4Nums4Text0()
+        {
+            //Arrange
+            string code = "4444";
+            //Act 
+            bool result = Act8.AnalizeGeneralPostalCode(code);
+            //Assert
+            Assert.IsFalse(result);
+        }
+        [TestMethod]
+        public void TestCodeLong6Nums6Text0()
+        {
+            //Arrange
+            string code = "444444";
+            //Act
+            bool result = Act8.AnalizeGeneralPostalCode(code);
+            //Assert
+            Assert.IsFalse(result);
+        }
+        [TestMethod]
+        public void TestCodeLong5Nums4Text1()
+        {
+            //Arrange
+            string code = "4444t";
+            //Act
+            bool result = Act8.AnalizeGeneralPostalCode(code);
+            //Assert
+            Assert.IsFalse(result);
+        }
+    }
+    [TestClass]
+    public class Act12Test
+    {
+        /* Act 12
+         * Classes d'equivalència:
+         * Array: Ordenat Exemple: {1,2,3,4}
+         * Valors limits:
+         *Array: No ordernat Exemple: {2,3,5,1}
+         */
+        [TestMethod]
+        public void TestOrderedArray()
+        {
+            //Arrange
+            int[] arrayNums = { 1, 2, 3, 4, 5 };
+            //Act
+            bool result = Act12.AvaluateArray(arrayNums);
+            //Assert
+            Assert.IsTrue(result);
+        }
+        [TestMethod]
+        public void TestNotOrderedArray()
+        {
+            //Arrange
+            int[] arrayNums = { 4, 3, 7, 1, 2 };
+            //Act
+            bool result = Act12.AvaluateArray(arrayNums);
+            //Assert
+            Assert.IsFalse(result);
+        }
+    }
+    [TestClass]
+    public class Act16Test
+    {
+        /* Act 16
+         * Classes d'equivalència:
+         * Numero capicúa: 10601
+         * Valors limits:
+         * Numeros no capicúa: 13512
+         */
+        [TestMethod]
+        public void NumberIsPalindromic()
+        {
+            //Arrange
+            int[] number = { 1,0,6,0,1};
+            //Act
+            bool result = Act16.ValidatePalindromic(number);
+            //Assert
+            Assert.IsTrue(result);
+        }
+        [TestMethod]
+        public void NumberIsNotPalindromic()
+        {
+            //Arrange
+            int[] number = { 1,3,5,1,2 };
+            //Act
+            bool result = Act16.ValidatePalindromic(number);
+            //Assert
+            Assert.IsFalse(result);
+        }
+    }
+    [TestClass]
+    public class Act17Test
+    {
+        /* Act 17
+         * Classes d'equivalència:
+         * String al reves
+         * Valors limits:
+         * String al reves
+         */
+        [TestMethod]
+        public void NormalString()
+        {
+            //Arrange
+            string Msg = "Hola que tal";
+            //Act
+            string restul = Act17.ReverseString(Msg);
+            //Assert
+            Assert.AreEqual("lat euq aloH", restul);
+        }
+    }
+}
