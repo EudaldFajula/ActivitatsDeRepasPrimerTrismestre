@@ -322,4 +322,21 @@ namespace BibliotecaActRepas
             return new string(textArray);
         }
     }
+    public static class Act20
+    {
+        public static string FindLargerWord(string phrase)
+        {
+            string[] words = phrase.Split(' ');
+            string largerWord = "";
+
+            foreach (string word in words)
+            {
+                if (word.Length > largerWord.Length)
+                {
+                    largerWord = word;
+                }
+            }
+            return largerWord;
+        }
+    }
 }
