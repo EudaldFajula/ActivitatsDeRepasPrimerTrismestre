@@ -8,10 +8,10 @@ namespace ActRepas
     {
         public static void Main()
         {
-            string Msg = "One Three, asnmfdaoaondao";
+            
             try
             {
-               Console.WriteLine(Act20.FindLargerWord(Msg));
+               
             }
             catch (FormatException)
             {

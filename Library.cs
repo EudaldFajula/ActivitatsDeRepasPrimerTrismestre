@@ -278,7 +278,7 @@ namespace BibliotecaActRepas
     }
     public static class Act17
     {
-        public static char[] ReverseString(string normalString)
+        public static string ReverseString(string normalString)
         {
             char[] finalString = new char[normalString.Length];
             for (int i = 0; i < finalString.Length - 1;)
@@ -289,7 +289,7 @@ namespace BibliotecaActRepas
                     finalString[j] = normalString[i];
                 }
             }
-            return finalString;
+            return new string (finalString);
         }
     }
     public static class Act18
@@ -338,5 +338,9 @@ namespace BibliotecaActRepas
             }
             return largerWord;
         }
+    }
+    public static class Act21
+    {
+
     }
 }
